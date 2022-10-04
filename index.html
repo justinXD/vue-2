@@ -16,11 +16,18 @@
             <span v-if="changePercent > 0">👍</span>
             <span v-else-if="changePercent < 0">😢</span>
             <span v-else>🤞</span>
-<!-- v-show lo que hace es esconder el elemento si no cumple la condicion modificando el css y v-if elimina el elemento  si no cumple con la condicion-->
-            <span v-show="changePercent > 0">👍</span>
-            <span v-show="changePercent < 0">😢</span>
-            <span v-show="changePercent == 0">🤞</span>
         </h1>
+
+        <ul>
+            <li v-for="(p, i) in prices" :key="p">
+                {{ i }} - {{ p }}
+            </li>
+        </ul>
+        <ul>
+            <li v-for="(p, i) in pricesWithDays" :key="p.day">
+                {{ i }} - {{ p.day }} - {{ p.value }}
+            </li>
+        </ul>
     </div>
     <script src="app.js"></script>
 </body>
