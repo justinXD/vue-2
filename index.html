@@ -10,20 +10,19 @@
 <body> 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <div id="app">
-        <img v-bind:src="img" v-bind:alt="name" width="100px" height="100px">
+        <img @mouseover="toggleShowPrices"
+            @mouseout="toggleShowPrices"
+            :src="img" :alt="name" 
+            width="100px" height="100px">
         <h1>
             {{  name }}
             <span v-if="changePercent > 0">👍</span>
             <span v-else-if="changePercent < 0">😢</span>
             <span v-else>🤞</span>
+            <span @click="toggleShowPrices">{{ showPrices ? '😎' : '😢' }}</span><!--@click="toggleShowPrices" es la abreviacion de la directiva v-on:click="toggleShowPrices"-->
         </h1>
-
-        <ul>
-            <li v-for="(p, i) in prices" :key="p">
-                {{ i }} - {{ p }}
-            </li>
-        </ul>
-        <ul>
+        
+        <ul v-show="showPrices">
             <li v-for="(p, i) in pricesWithDays" :key="p.day">
                 {{ i }} - {{ p.day }} - {{ p.value }}
             </li>
