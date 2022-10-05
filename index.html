@@ -21,7 +21,8 @@
             <span v-else>🤞</span>
             <span @click="toggleShowPrices">{{ showPrices ? '😎' : '😢' }}</span><!--@click="toggleShowPrices" es la abreviacion de la directiva v-on:click="toggleShowPrices"-->
         </h1>
-        
+        <input type="number" v-model="value">
+        <span>{{ convertedValue }}</span>
         <ul v-show="showPrices">
             <li :class="{orange: p.value == price, red: p.value < price, green: p.value > price}"
                 v-for="(p, i) in pricesWithDays" 
