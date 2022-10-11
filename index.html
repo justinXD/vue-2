@@ -8,19 +8,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body> 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <div id="app">
-        <img v-bind:src="img" v-bind:alt="name" width="100px" height="100px">
-        <h1>
-            {{  name }}
-            <span v-if="changePercent > 0">👍</span>
-            <span v-else-if="changePercent < 0">😢</span>
-            <span v-else>🤞</span>
-<!-- v-show lo que hace es esconder el elemento si no cumple la condicion modificando el css y v-if elimina el elemento  si no cumple con la condicion-->
-            <span v-show="changePercent > 0">👍</span>
-            <span v-show="changePercent < 0">😢</span>
-            <span v-show="changePercent == 0">🤞</span>
-        </h1>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <div id="app" :style="{ background: '#' + color }">
+        <coin-detail 
+            @change-color="updateColor"
+            :coin="btc"></coin-detail>
     </div>
     <script src="app.js"></script>
 </body>
