@@ -7,6 +7,15 @@ Vue.component('CoinDetail',{
             value: 0,
         }
     },
+    created() { //metodo created que nos da como resultado el evento created, 
+        //primero se ejecuta el created del componente padre y despues el created y mounted del componente hijo,
+        //por ultimo se ejecuta el mounted del componente padre
+        console.log('Created coinDetail...')   //nos ayuda a obtener informacion de una API REST
+    },
+
+    mounted() { //metodo mounted que nos da como resultado el evento mounted
+        console.log('Mounted coinDetail...')   //aqui ya esta disponible el DOM y puedo acceder a informacion del DOM
+    },
     methods: {
         toggleShowPrices(){
             this.showPrices = !this.showPrices
@@ -78,6 +87,17 @@ new Vue({
             color: 'f4f4f4',
         }
     },
+
+    created() { //metodo created que nos da como resultado el evento created
+        console.log('Created...')   //nos ayuda a obtener informacion de una API REST
+    },
+
+    mounted() { //metodo mounted que nos da como resultado el evento mounted
+        console.log('Mounted...')   //aqui ya esta disponible el DOM y puedo acceder a informacion del DOM
+    },
+
+    /*created y mounted son nuevas configuraciones para el componente en sus 
+    metodos data, computed, methods o la pripiedad el del compunente vue*/
 
     methods: {
         updateColor(color){
