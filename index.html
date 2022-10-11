@@ -12,7 +12,14 @@
     <div id="app" :style="{ background: '#' + color }">
         <coin-detail 
             @change-color="updateColor"
-            :coin="btc"></coin-detail>
+            :coin="btc">
+            <template #text>    <!-- #text es el shorthand de v-slot:text, template es una etiqueta propia de vue -->
+                <p>ola k ase</p>
+            </template>
+            <template #link>
+                <a href="https://github.com/justinXD" target="_blank">Link!</a>
+            </template>
+        </coin-detail>
     </div>
     <script src="app.js"></script>
 </body>
