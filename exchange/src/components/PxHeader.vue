@@ -8,8 +8,8 @@
                     <px-icon class="mr-2" />
                     <router-link
                         :to="{ name: 'home' }"
-                        class="font-semibold text-xl tracking-tight"
-                        >PlatziExchange</router-link
+                        class="font-Merriweather text-xl tracking-tight"
+                        >MyExchange</router-link
                     >
                 </div>
                 <div

@@ -5,8 +5,10 @@ module.exports = {
             center: true,
         },
         fontFamily: {
-            display: ['Gilroy', 'sans-serif'],
-            body: ['Graphik', 'sans-serif'],
+            // display: ['Gilroy', 'sans-serif'],
+            // body: ['Graphik', 'sans-serif'],
+            Inconsolata: ['Inconsolata', 'monospace'],
+            Merriweather: ['Merriweather', 'serif'],
         },
         extend: {
             colors: {
