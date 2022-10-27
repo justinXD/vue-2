@@ -1,7 +1,7 @@
 <template>
     <table>
         <thead>
-            <tr class="bg-gray-100 border-b-2 border-gray-400">
+            <tr class="bg-blanco0 border-b-2 border-gray-400">
                 <th></th>
                 <th
                     :class="{
@@ -21,7 +21,7 @@
                 <th>Variación 24hs</th>
                 <td class="hidden sm:block"></td>
                 <input
-                    class="bg-gray-100 focus:outline-none border-b border-gray-400 py-2 px-4 block w-full appearance-none leading-normal"
+                    class="bg-blanco0 focus:outline-none py-2 px-4 block w-full appearance-none leading-normal"
                     id="filter"
                     placeholder="Buscar..."
                     type="text"
@@ -33,7 +33,7 @@
             <tr
                 v-for="a in filteredAssets"
                 :key="a.id"
-                class="border-b border-gray-200 hover:bg-gray-100 hover:bg-orange-100"
+                class="border-b border-gray-300 hover:bg-beige"
             >
                 <td>
                     <img
@@ -47,7 +47,7 @@
                 </td>
                 <td>
                     <router-link
-                        class="hover: underline text-green-600"
+                        class="hover:underline text-azul1"
                         :to="{ name: 'coin-detail', params: { id: a.id } }"
                     >
                         {{ a.name }}
@@ -144,13 +144,15 @@ export default {
 
 td {
     padding: 20px 0px;
-    font-size: 0.6rem;
+    font-size: 1.2rem;
+    font-family: 'Inconsolata', monospace;
     text-align: center;
 }
 
 th {
     padding: 5px;
-    font-size: 0.6rem;
+    font-size: 1.2rem;
+    font-family: 'Inconsolata', monospace;
 }
 
 @media (min-width: 640px) {
@@ -158,6 +160,7 @@ th {
     th {
         padding: 20px;
         font-size: 1rem;
+        font-family: 'Inconsolata', monospace;
     }
 
     th {

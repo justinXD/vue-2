@@ -2,7 +2,7 @@
     <header class="shadow w-screen">
         <nav>
             <nav
-                class="flex items-center justify-between flex-wrap bg-green-400 p-6"
+                class="flex items-center justify-between flex-wrap bg-azul1 p-6 shadow-xl"
             >
                 <div class="flex items-center flex-shrink-0 text-white mr-6">
                     <px-icon class="mr-2" />
@@ -20,7 +20,7 @@
                             v-for="l in links"
                             :key="l.title"
                             :to="l.to"
-                            class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                            class="font-Merriweather block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
                             >{{ l.title }}</router-link
                         >
                     </div>

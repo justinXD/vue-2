@@ -3,7 +3,7 @@
         <div class="flex justify-center">
             <bounce-loader
                 :loading="isLoading"
-                :color="'#68d391'"
+                :color="'#84C9D9'"
                 :size="100"
             />
         </div>
@@ -73,8 +73,8 @@
                     class="my-10 sm:mt-0 flex flex-col justify-center text-center"
                 >
                     <button
+                        class="bg-azul1 text-white font-bold py-2 px-4 rounded hover:bg-naranja"
                         @click="toggleConverter"
-                        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
                     >
                         {{
                             fromUsd
@@ -136,7 +136,7 @@
                             <slot>Obtener Link</slot>
                         </px-button>
                         <a
-                            class="hover:underline text-green-600 cursor-pointer"
+                            class="hover:underline text-azul1 cursor-pointer"
                             :href="m['url']"
                             target="_blank"
                             >{{ m.url }}</a
@@ -242,10 +242,8 @@ export default {
                     } else {
                         this.$set(exchange, 'url', res.data.exchangeUrl)
                     }
-                    console.log(exchange.url)
                 })
                 .finally(() => (this.isLoading = false))
-            console.log(respuesta)
             return respuesta
         },
     },
