@@ -187,6 +187,8 @@ export default {
                     parseFloat(h.priceUsd).toFixed(2)
                 )
             )
+            // console.log(minimo)
+            // console.log(...this.history.data)
             return minimo
         },
 
